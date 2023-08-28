@@ -9,18 +9,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* text-align: center; */
 }
 
 html {
-  background-color: #24252a;
+  background-color: #252b42;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #24252a;
+  background-color: #252b42;
+}
+header > div{
+  width: 100%;
+  height: 91px;
+  display: grid;
 }
 
 header > h1 {
@@ -68,9 +72,28 @@ header > h1 {
   cursor: pointer;
   transition: background-color 0.3s ease 0s;
 }
-fle
 .cta:hover {
   background-color: rgba(0, 136, 169, 0.8);
+}
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
 }
 
 .menu {
@@ -87,7 +110,7 @@ footer{
 }
 .last-pannel {
   width: 100%;
-  height: 271px;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -122,7 +145,7 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #24252a;
+  background-color: #252b42;
 }
 
 #webh {
@@ -335,7 +358,6 @@ background: var(--primary-color, #23A6F0);
 color: var(--primary-color, #23A6F0);
 background-color: #24252a;
 border: 2px solid #23A6F0;
-font-weight: ;
 border-radius: 6px;
 padding: 15px 40px;
 align-items: center;
@@ -620,6 +642,7 @@ letter-spacing: 0.2px;
   justify-content: center;
   align-items: center;
   
+  
 }
 .bbooxx2{
   display: flex;
@@ -693,6 +716,8 @@ text-decoration: none;
 .grid2{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  /* justify-content: space-evenly; */
+  column-gap: 10px;
 }
 .bop1{
   display: flex;
@@ -700,10 +725,22 @@ text-decoration: none;
   width: 348px;
   height: 678px;
 }
-.innercontanner{
+.innercontanner1{
   width: 348px;
   height: 300px;
   background-image: url(./image/product-cover-17.png);
+  display: flex;
+}
+.innercontanner2{
+  width: 348px;
+  height: 300px;
+  background-image: url(./image/product-cover-19.png);
+  display: flex;
+}
+.innercontanner3{
+  width: 348px;
+  height: 300px;
+  background-image: url(./image/product-cover-18.png);
   display: flex;
 }
 .banner{
@@ -822,7 +859,7 @@ letter-spacing: 0.2px;
 }
 .grp{
   width: auto;
-color: var(--text-color, #252B42);
+color: var(--text-color, #252b42);
 font-family: Montserrat;
 font-size: 16px;
 font-style: normal;
@@ -953,13 +990,27 @@ font-weight: 900;
 line-height: 16px; /* 133.333% */
 letter-spacing: 0.2px;
 }
+.butyr{
+  color: var(--primary-color, #23A6F0);
 
-
-
-
-
-
-
+/* h6 */
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 171.429% */
+letter-spacing: 0.2px;
+padding: 20px 40px;
+border: 4px solid #23A6F0;
+border-radius:30px;
+margin: 20px 0px 0px 10px;
+}
+img[alt="image_ui"]{
+  align-content: center;
+  position: relative;
+  left: 20px;
+  top: 50px;
+}
 
 
     </style>
@@ -977,7 +1028,6 @@ letter-spacing: 0.2px;
         </nav>
         <a class="cta" href="#">Join us <img src="./icn arrow-right .icn-xs.png" alt="CLICK TO JOIN US"></a>
     </header>
-    
     <div id="firstp">
       <div id="ff-1">
         <h5 >Join us</h5>
@@ -1039,7 +1089,7 @@ letter-spacing: 0.2px;
     </div>
     <div class="container2">
       <div class="bbooxx1">
-        <img style="width: 400px;"  src="./Screenshot 2023-08-28 133900.png" alt="image_ui">
+        <img style="width: 100%;"  src="./Screenshot 2023-08-28 133900.png" alt="image_ui">
       </div>
       <div class="bbooxx2">
       <div class="liney"></div>
@@ -1059,7 +1109,7 @@ letter-spacing: 0.2px;
       </div>
       <div class="grid2">
         <div class="bop1">
-          <div class="innercontanner">
+          <div class="innercontanner1">
 
             <div class="banner">
               <h6 class="op">Sale</h6>
@@ -1105,20 +1155,139 @@ letter-spacing: 0.2px;
                 <p class="tyr">22hr 30min</p>
               </div>
               <div class="fty2">
-                <img src="./image/ghadi.svg" alt="iy">
+                <img src="./image/water.svg" alt="iy">
                 <p class="tyr">64 Lesson</p>
               </div>
               <div class="fty3">
-                <img src="./image/ghadi.svg" alt="iy">
+                <img src="/image/icon ant-design-area-chart-outlined.svg" alt="iy">
                 <p class="tyr">Progress</p>
               </div>
             </div>
+            <button class="butyr"><h4>Learn More </h4></button>
         </div>
           
             
         </div>
-        <div class="bop1"></div>
-        <div class="bop1"></div>
+        <div class="bop1">
+          <div class="innercontanner2">
+
+            <div class="banner">
+              <h6 class="op">Sale</h6>
+            </div>
+            <div class="items">
+              <div class="heart">
+                <img src="./image/heart.svg" alt="ytr">
+              </div>
+              <div class="basket">
+                <img src="./image/bich.svg" alt="ytr">
+              </div>
+              <div class="eye">
+                <img src="./image/eye.svg" alt="ytr">
+              </div>
+            </div>
+            
+          </div>
+          <div class="contentcontainer">
+            <div class="dabba">
+          <p class="ppp"><a href="#" class="englishlabel">English Department</a></p>
+          <div class="rating-box">
+            <div class="star"><img src="./image/star.svg" alt="im"></div>
+            <div class="rating">4.9</div>
+          </div>
+          </div>
+          <h4 class="grp">Graphic Design</h4>
+          <p class="iop">We focus on ergonomics and meeting 
+            you where you work. It's only a 
+            keystroke away.</p>
+            <div class="sales">
+              <div class="im">
+                <img src="./image/d box.svg" alt="iu">
+              </div>
+              <h4 class="yce">15 Sold</h4>
+            </div>
+            <div class="dollor">
+              <h4 class="doll1"> $16.48 </h4>
+              <h4 class="doll2"> $6.48 </h4>
+            </div>
+            <div class="container6">
+              <div class="fty1">
+                <img src="./image/ghadi.svg" alt="iy">
+                <p class="tyr">22hr 30min</p>
+              </div>
+              <div class="fty2">
+                <img src="./image/water.svg" alt="iy">
+                <p class="tyr">64 Lesson</p>
+              </div>
+              <div class="fty3">
+                <img src="/image/icon ant-design-area-chart-outlined.svg" alt="iy">
+                <p class="tyr">Progress</p>
+              </div>
+            </div>
+            <button class="butyr"><h4>Learn More </h4></button>
+        </div>
+          
+            
+        </div>
+        <div class="bop1">
+          <div class="innercontanner3">
+
+            <div class="banner">
+              <h6 class="op">Sale</h6>
+            </div>
+            <div class="items">
+              <div class="heart">
+                <img src="./image/heart.svg" alt="ytr">
+              </div>
+              <div class="basket">
+                <img src="./image/bich.svg" alt="ytr">
+              </div>
+              <div class="eye">
+                <img src="./image/eye.svg" alt="ytr">
+              </div>
+            </div>
+            
+          </div>
+          <div class="contentcontainer">
+            <div class="dabba">
+          <p class="ppp"><a href="#" class="englishlabel">English Department</a></p>
+          <div class="rating-box">
+            <div class="star"><img src="./image/star.svg" alt="im"></div>
+            <div class="rating">4.9</div>
+          </div>
+          </div>
+          <h4 class="grp">Graphic Design</h4>
+          <p class="iop">We focus on ergonomics and meeting 
+            you where you work. It's only a 
+            keystroke away.</p>
+            <div class="sales">
+              <div class="im">
+                <img src="./image/d box.svg" alt="iu">
+              </div>
+              <h4 class="yce">15 Sold</h4>
+            </div>
+            <div class="dollor">
+              <h4 class="doll1"> $16.48 </h4>
+              <h4 class="doll2"> $6.48 </h4>
+            </div>
+            <div class="container6">
+              <div class="fty1">
+                <img src="./image/ghadi.svg" alt="iy">
+                <p class="tyr">22hr 30min</p>
+              </div>
+              <div class="fty2">
+                <img src="./image/water.svg" alt="iy">
+                <p class="tyr">64 Lesson</p>
+              </div>
+              <div class="fty3">
+                <img src="/image/icon ant-design-area-chart-outlined.svg" alt="iy">
+                <p class="tyr">Progress</p>
+              </div>
+            </div>
+            <button class="butyr"><h4>Learn More </h4></button>
+        </div>
+          
+            
+        </div>
       </div>
     </div>
     <div id="above">
